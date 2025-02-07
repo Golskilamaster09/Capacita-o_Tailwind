@@ -1,42 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind-Class</title>
     <link href="./style.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+
+<!-- Utilizando o Modo Dark no Body -->
+ <!-- dark:bg-gray-800 -->
+<body class="bg-gray-100 dark:bg-gray-800 ">
+
+    <!-- Alternando o Tamanho das Fontes, Cores de Texto e Cores de fundo -->
     <h1 class="text-2xl text-yellow-100  font-bold bg-sky-500/10">
         Hello world!
       </h1>
     <h1 class="text-base text-yellow-200 bg-sky-500/50">
         Hello world!
       </h1>
+      <!-- Utilizando o Tracking-wider para dar espaçamento nas letras -->
     <h1 class="text-sm text-yellow-300 tracking-wider bg-sky-500/70">
         Hello world!
       </h1>
     <h1 class="text-7xl text-yellow-500 font-bold tracking-wider bg-sky-500/100">
         Hello world!
       </h1>
+
+      <!-- m-4 = Margin 4 para todos os lados -->
       <div class="m-4">
+
+        <!-- Criando botões diversificados com efeitos diferentes -->
+         <!-- Utilizando efeito Hover e Ring -->
+          <!-- px-4 = altera o eixo X, assim ficando com padding 4 o eixo X -->
+          <!-- py-1 = altera o eixo Y, assim ficando com padding 1 o eixo Y -->
+         <!-- Tambem utilizamos o Efeito Rounded, que seria o Border-radius  -->
       <button class="bg-sky-500 hover:bg-sky-700 hover:border-1 hover:border-yellow-500
        text-white font-bold px-4 py-1 rounded-md">Salvar Mudanças</button>
         </div>
       <div class="m-4">
-      <button class="bg-red-500 hover:bg-red-700 hover:ring-2 focus: text-white font-bold px-4 py-1 rounded-md">Salvar Mudanças</button>
+      <button class="bg-red-500 hover:bg-red-700 text-white hover:ring-2 font-bold px-4 py-1 rounded-md">Salvar Mudanças</button>
         </div>
 
       <div class="m-4">
       <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold px-4 py-1 rounded-md">Salvar Mudanças</button>
         </div>
     
+        <!-- Fazendo a primeira demonstração de como seria utilizar uma Flex-box no tailwind -->
+             <!-- Sempre que formos utilizar uma Flexbox começamos com a palavra Flex para definir a classe -->
+             <!-- h-screen = Define que a altura vai ocupar toda a tela -->
         <div class="bg-blue-300 h-screen w-1/2 flex justify-center items-center">
+
+            <!-- Determinando um Breakpoint para alterar o estilo do fundo -->
             <div class="p-4 m-5 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates harum nesciunt accusantium quae quia, ea est voluptate, labore qui facilis perferendis obcaecati, vel unde! Suscipit quae dolorem provident dolores.
             </div>
         </div>
 
+        <!-- Utilizando Flexbox para demonstrar posicionamento  -->
         <div class="bg-gray-100 h-screen">
             <div class="flex space-x-4 h-36 bg-gray-500 justify-center items-center">
                 <div class=" p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
@@ -45,7 +65,7 @@
             </div>
 
             <br>
-
+        <!-- Utilizando Flexbox para demonstrar o flex-grow  -->
             <div class="flex space-x-4 h-36 bg-gray-500 justify-center items-center">
                 <div class=" p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
                 <div class="flex-grow flex-shrink-0  p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
@@ -53,7 +73,7 @@
             </div>
 
             <br>
-
+        <!-- Utilizando Flexbox para demonstrar o flex-wrap   -->
             <div class="flex flex-wrap space-x-4 h-3/6 bg-gray-500 justify-center items-center">
                 <div class=" p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
                 <div class="w-screen h-24 p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
@@ -61,7 +81,7 @@
             </div>
 
             <br>
-
+        <!-- Utilizando Grid, sempre que formos utilizar vamos começar definindo a Classe como Grid, após isso definimos o numero de colunas  -->
             <div class=" grid grid-cols-3 gap-4 h-36 bg-gray-500">
                 <div class=" col-span-3 p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
                 <div class=" p-4 md:bg-gradient-to-b  from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-r text-white"> </div>
@@ -72,7 +92,7 @@
             </div>
 
             <br>
-
+        <!-- Alternando o tamanho do Texto de acordo com o Breakpoint  -->
             <div class=" sm:bg-sky-500 md:bg-blue-600 lg:bg-red-700 h-screen  ">
                 <h1 class="text-sm sm:text-base md:text-xl lg:text-2xl">
                     Hello Tailwind
@@ -81,7 +101,7 @@
             </div>
 
             <br>
-
+        <!-- Utilizando Group para juntar a tag Div (container) com a tag H1 e P para que assim que o mouse pasasse por cima do container fosse ativado o efeito de HOVER-->
             <div class="group w-72 bg-gray-300 p-4">
                 <h1 class="font-bold group-hover:text-blue-500">
                     Hello Tailwind
@@ -91,10 +111,173 @@
                 </p>
             </div>
 
+            <!-- Utilizando o efeito FOCUS no input para demonstração -->
             <input 
             type="text"
             class="bg-gray-300 text-lg m-1 px-4 py-2 hover:bg-gray-500 focus:text-red-300">
                 
+            <br>
+            <br>
+            
+            <!-- Criando Componente Card -->
+
+            <div class="container mx-auto px-4 py-8 space-y-10">
+                
+                <div>
+                    <h6 class="dark:text-gray-50 font-bold">Componente Dropdownn</h6>
+                    <div class="relative">
+                        <button class="flex items-center bg-white border border-gray-300 focus:border-blue-500 rounded px-3 py-1 text-sm  text-gray-800 placeholder-gray-300 focus:outline-none shadow"> 
+                            Botão
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 ml-3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                              </svg>
+                               
+                        </button>
+                        <!-- Para aparecer o menu basta remover da classe o elemento HIDDEN -->
+                        <div class="absolute hidden bg-white border border-gray-300 py-1 shadow-md rounded-md" 
+                            style="width: 200px;"
+                        >
+                            <a 
+                            href=""
+                                class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-300"
+                            >Link 1</a>
+                            <a 
+                            href=""
+                                class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-300"
+                            >Link 2</a>
+                            <a 
+                            href=""
+                                class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-300"
+                            >Link 3</a>
+                            <a 
+                            href=""
+                                class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-300"
+                            >Link 4</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Componente Input -->
+                <div  >
+                    <h6 class="dark:text-gray-50 font-bold">Componente Input</h6>
+                    <div class="space-y-5">
+                        <input type="text"
+                    placeholder="Digite seu nome"
+                    class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 rounded px-2 py-1 text-sm  text-gray-800 placeholder-gray-300 focus:outline-none"
+                    >
+
+                    <input type="text"
+                    placeholder="Digite seu nome"
+                    class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 rounded px-3 py-2 text-base  text-gray-800 placeholder-gray-300 focus:outline-none"
+                    >
+                    
+                    <input type="text"
+                    placeholder="Digite seu nome"
+                    class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 rounded px-3 py-3 text-base  text-gray-800 placeholder-gray-300 focus:outline-none"
+                    >
+
+                    <input type="text"
+                    placeholder="Digite seu nome"
+                    class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-3 text-base  text-gray-800 placeholder-gray-300 focus:outline-none"
+                    >
+
+                    <input type="text"
+                    placeholder="Digite seu nome com transition"
+                    class="transition duration-200 ease-in-out w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-3 text-base  text-gray-800 placeholder-gray-300 focus:outline-none"
+                    >
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- Componente Badge -->
+                 <!-- Componente Badge Ativo -->
+                 <div class="mb-2">
+                    <h6 class="dark:text-gray-50 font-bold">Componente Badge/Tag</h6>
+                        <!-- Componente Badge Ativo -->
+                        <div class=" inline-flex item-center text-sm bg-green-100 px-1.5 py-0.5 rounded-md text-green-800 font-medium ">
+                            Ativo
+                        </div>
+                        <div class=" inline-flex item-center text-sm bg-green-100 px-1.5 py-0.5 rounded-full text-green-800 font-medium ">
+                            Ativo
+                        </div> 
+                    
+                </div>
+
+                <!-- Componente Badge Inativo -->
+                <div class="mb-2">
+
+                    <div class=" inline-flex item-center text-sm bg-red-100 px-1.5 py-0.5 rounded-md text-red-800 font-medium ">
+                        Inativo
+                    </div>
+
+                    <div class=" inline-flex item-center text-sm bg-red-100 px-1.5 py-0.5 rounded-full text-red-800 font-medium ">
+                        Inativo
+                    </div>
+
+                </div>
+
+                <!-- Componente Badge Em Progresso -->
+                <div>
+
+                    <div class=" inline-flex item-center text-sm bg-yellow-100 px-1.5 py-0.5 rounded-md text-yellow-800 font-medium ">
+                        Em progresso
+                    </div>
+
+                    <div class=" inline-flex item-center text-sm bg-yellow-100 px-1.5 py-0.5 rounded-full text-yellow-800 font-medium ">
+                        Em progresso
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- Componente Button -->
+                <div>
+                    <h6 class="dark:text-gray-50 font-bold mb-2">Componente Button</h6>
+                    <button class="bg-blue-500 text-sm px-4 py-1 rounded text-white shadow hover:bg-blue-600">
+                        Save
+                    </button>  
+                    <button class="bg-blue-500 text-sm px-6 py-2 rounded text-white shadow hover:bg-blue-600">
+                        Save
+                    </button>  
+                    <button class="bg-blue-500 text-base px-8 py-3 rounded text-white shadow hover:bg-blue-600">
+                        Save
+                    </button>  
+                </div>
+
+                <hr>
+
+                <!-- Componente Card -->
+                <div>
+                    <h6 class="dark:text-gray-50 font-bold mb-2">Componente Card</h6>
+
+                    <div class="dark:bg-gray-900 bg-white rounded-lg shadow overflow-hidden">
+    
+                        <div class="w-full dark:bg-gray-900 bg-gray-100 p-4 border-b border-gray-100 dark:border-gray-500 ">
+                            <h4 class="font-bold dark:text-gray-50">Topo</h4>
+                        </div>
+        
+                        <div class="p-4 dark:text-gray-50 ">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum quidem, explicabo obcaecati nobis tempora 
+                        </div>
+                        
+                        <div class="w-full dark:text-gray-50 dark:bg-gray-900 bg-gray-50 p-3 border-t border-gray-100 dark:border-gray-500 ">
+                            Rodapé
+                        </div>
+                    </div>
+                </div>
+
+             
+            </div>
+
+            
+
         </div>
 </body>
 </html>
